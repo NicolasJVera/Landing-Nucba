@@ -1,0 +1,58 @@
+
+
+/* Variables */
+:root {
+  --black: #02050e;
+  --white: #fff;
+  --violet: #560B85;
+
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Reddit Mono", monospace;
+    /* border: 1px solid red;   */
+}
+
+body {
+  background: linear-gradient(93deg, var(--black), var(--violet));
+}
+
+/* Header */
+.header {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 5rem;
+}
+
+.navbar,
+.navbar-lista {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.navbar-lista {
+  gap: 2rem;
+}
+
+.navbar-lista a {
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.navbar-lista a:hover {
+    color: #ffffff33;
+  }
