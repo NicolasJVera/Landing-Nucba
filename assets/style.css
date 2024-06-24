@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-  --background: #aeaed6;
-  --text: #555;
+  --background: #B197FC;
+  --text: #55555583;
   --text-dos: #2c3e50;
   --negro: #02050e;
   --blanco: #fff;
-
+  --backgrounDos: radial-gradient(#fff, #f6f5f2);
   --max-width: 1200px;
 }
 
@@ -21,7 +21,7 @@
 
 /** Globales **/
 body {
-  background-color: var(--background);
+  background-color: var(--blanco);
   font-size: 1.6rem;
   line-height: 1.5;
 }
@@ -73,7 +73,7 @@ h3 {
   padding: 0 50px;
   height: 5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  background: var(--background);
+  background: radial-gradient(#fff, #f6f5f2);
   position: fixed;
   width: 100%;
 }
@@ -105,15 +105,16 @@ h3 {
 }
 
 .navbar-lista a {
-  color: var(--blanco);
+  color: #555;
   font-size: 25px;
+  font-weight: 300;
 }
 
 ul li a{
-  padding:5px 10px;
-  position:relative;
-  text-transform:uppercase;
-  margin:0 10px;
+  padding: 5px 10px;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0 10px;
   transition: all .5s;
 } 
 
@@ -129,29 +130,31 @@ main {
 /* Hero */
 
 .hero {
-  max-width: var(--max-width);
+  background: radial-gradient(#fff, #f6f5f2);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
   padding: 15rem 0 10rem 0;
+  margin: 0 auto;
 }
 
 .hero-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
-  width: 100%;
+  max-width: var(--max-width);
 }
 
 .hero-info h1 {
   font-size: 60px;
-  font-weight: 800;
-  background: linear-gradient(to top, #000000, #aeaed6); 
-  color: transparent;
-  background-clip: text;
+  font-weight: 600;
+  /* background: linear-gradient(to top, #B197FC, #000000);   */
+  color: var(--negro);
+  /* background-clip: text;  */
 }
 
 .hero-info p {
@@ -167,14 +170,19 @@ main {
 }
 
 .hero-info a {
-  background: var(--primary);
-  color: var(--text-white);
+  display: flex;
+  background: var(--text);
+  color: var(--blanco);
   border-radius: 10px;
   padding: 10px 25px;
   font-size: 14px;
 }
 
-/* .btn{
+.hero-cart {
+  width: 500px;
+}
+
+ .btn{
   background: #555;
   color: #fff;
   padding: 8px 30px;
@@ -182,8 +190,9 @@ main {
   border-radius: 30px;
   transition: all 0.5s;
 }
+
 .btn:hover{
-  background: black;
+  background: var(--negro);
 } */
 
 /************************* Info ***************************************/
@@ -202,18 +211,20 @@ main {
 
 .info-us h2 {
   color: var(--text-dos);
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 3rem;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 .info-container {
   display: flex;
-  gap: 20px;
+  gap: 40px;
+  margin: 40px;
 }
 
 .info-cart {
-  background: var(--text-dos);
+  background: var(--text);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
@@ -237,6 +248,94 @@ main {
   color: var(--blanco);
 }
 
+/*********************************** Productos ***************************************************/
+.products {
+  max-width: var(--max-width);
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 0;
+}
+
+.products h2 {
+  color: var(--text-dos);
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.category {
+  background: var(--text-dos);
+  color: var(--blanco);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.active {
+  background: var(--background);
+}
+
+.products-container {
+  /* border: 1px solid yellow; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.product {
+  background: var(--backgrounDos);
+  padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.product h4 {
+  color: #555;
+  font-weight: normal;
+}
+
+.product p {
+  font-size: 15px;
+}
+
+.valoracion {
+  /* #B197FC */
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn-load {
+  background: var(--text);
+  border: 1px solid var(--blanco);
+  color: var(--bg-white);
+  padding: 10px 35px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.btn-load:hover {
+  background: var(--negro);
+}
+
 /**************************************** Footer ********************************************/
 .footer {
   color: var(--blanco);
@@ -245,6 +344,7 @@ main {
 }
 
 .footer-texto {
+  cursor: pointer;
   font-family: var(--text);
   font-weight: 300;
   text-align: center;
@@ -253,50 +353,6 @@ main {
 
 .footer-texto a {
   color: #000;
-}
-
-/********************************** ANIMACION HOVER **************************************************/
-
-.navbar-lista a:hover {
-  background-color: #00000046;
-  color:white;
-}
-
-.navbar-lista a:before {
-  content:'';
-  position:absolute;
-  bottom:12px;
-  left:12px;
-  width:12px;
-  height:12px;
-  border:3px solid #00000046;
-  border-width:0 0 3px 3px;
-  opacity:0;
-  transition:all 0.3s;
-}
-
-.navbar-lista a:hover:before {
-  opacity:1;
-  bottom:-7px;
-  left:-7px;
-}
-
-.navbar-lista a:after {
-  content:'';
-  position:absolute;
-  top:12px;
-  right:12px;
-  width:12px;
-  height:12px;
-  border:3px solid #00000046;
-  border-width:3px 3px 0 0;
-  opacity:0;
-  transition: all 0.3s;
-}
-.navbar-lista a:hover:after {
-  opacity:1;
-  top:-7px;
-  right:-7px;
 }
 
 /***************************** INPUTS ***********************************************/
@@ -320,7 +376,7 @@ main {
     right: 5%;
     flex-direction: column;
     width: 90%;
-    background: var(--background);
+    background: #555;
     border: 2px solid var(--blanco);
     border-top: 0;
     border-radius: 0px 0px 15px 15px;
@@ -331,7 +387,9 @@ main {
   }
 
   .navbar-lista a {
+    color: var(--blanco);
     font-size: 1.2rem;
+    font-weight: 200;
   }
 
   .menu-label {

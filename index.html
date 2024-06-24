@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRONTEND STORE</title>
+    <title>FrontEnd Store</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/css/animations.css" />
+    
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,53 +20,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <!-- Fav Icon-->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/Frontend_logo.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <header class="header">
       <a href="index.html">
         <!-- Logo temporal, mas adelante elegire uno que quede como final-->
-        <img src="/assets/img/icons/Frontend_logo.png" alt="Mi logo" class="logo" /> 
+        <img
+          src="/assets/img/icons/Frontend_logo.png"
+          alt="Mi logo"
+          class="logo"
+        />
       </a>
-       <nav class="navbar topBotomBordersOut">
+      <nav class="navbar topBotomBordersOut">
         <label for="menu-toggle" class="menu-label">
-          <i class="fa-solid fa-bars" ></i>
+          <i class="fa-solid fa-bars"></i>
         </label>
         <input type="checkbox" id="menu-toggle" />
 
         <ul class="navbar-lista">
           <li>
-            <a href="#Inicio">Inicio</a>
+            <a href="#inicio">Inicio</a>
           </li>
           <li>
-            <a href="#Nosotros">Nosotros</a>
+            <a href="#nosotros">Nosotros</a>
           </li>
-                    <li>
-            <a href="#Tienda">Tienda</a>
+          <li>
+            <a href="#tienda">Tienda</a>
           </li>
           <li>
             <a href="#">Contacto</a>
           </li>
         </ul>
-        <div class="line">
-
-        </div>
-      </nav> 
+        <div class="line"></div>
+      </nav>
       <label for="cart-toggle" class="cart-label">
-        <img
-          src="./assets/img/icons/cart-icon.svg"
-          alt="Carrito"
-          class="cart-icon"
-        />
+        <i class="fa-solid fa-cart-shopping fa-beat"></i>
       </label>
       <input type="checkbox" id="cart-toggle" />
     </header>
 
     <main>
-      <section id="Inicio" class="hero">
+      <section id="inicio" class="hero">
         <div class="hero-info">
           <h1>Bienvenido a FRONTEND STORE</h1>
-          <p>Compra la mejor ropa morderna y creativa a un precio unico.</p>
-          <!-- <a href="#" class="btn"> Comprar ahora</a> -->
+          <p>Compra la mejor ropa moderna y creativa a un precio unico.</p>
+          <a href="#tienda" class="btn"> Comprar ahora</a>
         </div>
         <div class="hero-cart">
           <img
@@ -74,7 +80,7 @@
         </div>
       </section>
 
-      <section id="Nosotros" class="info-us">
+      <section id="nosotros" class="info-us">
         <h2>¿Por qué comprar con nosotros?</h2>
         <div class="info-container">
           <!-- Tarjeta/Card 1 -->
@@ -131,11 +137,128 @@
           </div>
         </div>
       </section>
+
+      <!-- Section products -->
+      <section id="tienda" class="products">
+        <h2>Tienda</h2>
+        <!-- Categorias -->
+        <div class="categories">
+          <button class="category active btn">Todas</button>
+          <button class="category btn">HTML</button>
+          <button class="category btn">CSS</button>
+          <button class="category btn">JS</button>
+          <button class="category btn">React</button>
+          <button class="category btn">Back End</button>
+        </div>
+
+        <!-- productos -->
+        <div class="products-container">
+          <!-- product 1 -->
+          <div class="product">
+            <img src="./assets/img/8.jpg" alt="Remera Vercel" />
+            <h4>
+              Remera Github
+              <i class="fa-brands fa-github"></i>
+            </h4>
+            <div class="valoracion">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$20.00</p>
+          </div>
+
+          <!-- product 2-->
+          <div class="product">
+            <img src="./assets/img/2.jpg" alt="Remera AngularJS" />
+            <h4>
+              Remera Angular
+              <i class="fa-brands fa-angular"></i>
+            </h4>
+            <div class="valoracion">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$25.00</p>
+          </div>
+
+          <!-- product 3 -->
+          <div class="product">
+            <img src="../assets/img/3.jpg" alt="Remera React" />
+            <h4>
+              Remera React
+              <i class="fa-brands fa-react"></i>
+            </h4>
+            <div class="valoracion">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$29.99</p>
+          </div>
+
+          <!-- product 4 -->
+          <div class="product">
+            <img src="./assets/img/12.jpg" alt="Remera Redux" />
+            <h4>
+              Remera JS
+              <i class="fa-brands fa-js"></i>
+            </h4>
+            <div class="valoracion">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$22.50</p>
+          </div>
+
+          <!-- product 5 -->
+          <div class="product">
+            <img src="./assets/img/5.jpg" alt="Remera NodeJS" />
+            <h4>
+              Remera NodeJS
+              <i class="fa-brands fa-node"></i>
+            </h4>
+            <div class="valoracion">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$30.00</p>
+          </div>
+
+          <!-- product 6 -->
+          <div class="product">
+            <img src="./assets/img/6.jpg" alt="Remera Sass" />
+            <h4>
+              Remera Sass
+              <i class="fa-brands fa-sass"></i>
+            </h4>
+            <div class="valoracion">
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$32.00</p>
+          </div>
+        </div>
+        <button class="btn-load">Ver Más</button>
+      </section>
     </main>
 
     <footer class="footer">
       <p class="footer-texto">
-        Front End Store - Creado por <a href="#">Nicolas Vera</a>
+        Front End Store - Creado con 💖
+        <a href="https://github.com/NicolasJVera" target="_blank">
+          - Nicolas Vera -</a
+        >
       </p>
     </footer>
   </body>
