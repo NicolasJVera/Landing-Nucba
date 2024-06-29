@@ -1,11 +1,11 @@
 /* Variables */
 :root {
-  --background: #B197FC;
+  --background: #b197fc;
   --text: #55555583;
   --text-dos: #2c3e50;
   --negro: #02050e;
   --blanco: #fff;
-  --backgrounDos: radial-gradient(#fff, #f6f5f2);
+  --colorBtn: #3a247c;
   --max-width: 1200px;
 }
 
@@ -21,8 +21,9 @@
 
 /** Globales **/
 body {
-  background-color: var(--blanco);
-  font-size: 1.6rem;
+  background: radial-gradient(#fff, #b197fc);
+  /* background: radial-gradient(#fff, #3371b6); */
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
@@ -72,10 +73,11 @@ h3 {
   align-items: center;
   padding: 0 50px;
   height: 5rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  background: radial-gradient(#fff, #f6f5f2);
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); */
+  background: radial-gradient(#fff, #b197fc);
   position: fixed;
   width: 100%;
+  z-index: 3;
 }
 
 .navbar,
@@ -105,18 +107,18 @@ h3 {
 }
 
 .navbar-lista a {
-  color: #555;
+  color: var(--colorBtn);
   font-size: 25px;
   font-weight: 300;
 }
 
-ul li a{
+ul li a {
   padding: 5px 10px;
   position: relative;
   text-transform: uppercase;
   margin: 0 10px;
-  transition: all .5s;
-} 
+  transition: all 0.5s;
+}
 
 /** Main **/
 main {
@@ -130,7 +132,7 @@ main {
 /* Hero */
 
 .hero {
-  background: radial-gradient(#fff, #f6f5f2);
+  /* background: radial-gradient(#fff, #b197fc); */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -152,16 +154,17 @@ main {
 .hero-info h1 {
   font-size: 60px;
   font-weight: 600;
-  /* background: linear-gradient(to top, #B197FC, #000000);   */
-  color: var(--negro);
-  /* background-clip: text;  */
+   background: linear-gradient(to top, #B197FC, #000000);
+  color: transparent;
+  background-clip: text;  
 }
 
 .hero-info p {
   align-self: center;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
   width: 70%;
-  color: var(--negro);
+  color: var(--blanco);
 }
 
 .hero-info span {
@@ -171,7 +174,7 @@ main {
 
 .hero-info a {
   display: flex;
-  background: var(--text);
+  background: var(--background);
   color: var(--blanco);
   border-radius: 10px;
   padding: 10px 25px;
@@ -182,17 +185,9 @@ main {
   width: 500px;
 }
 
- .btn{
-  background: #555;
-  color: #fff;
-  padding: 8px 30px;
-  margin: 30px 0;
-  border-radius: 30px;
-  transition: all 0.5s;
-}
-
 .btn:hover{
-  background: var(--negro);
+  background: var(--colorBtn);
+  transition: all 0.5s;
 } */
 
 /************************* Info ***************************************/
@@ -274,12 +269,18 @@ main {
 }
 
 .category {
-  background: var(--text-dos);
+  background: var(--colorBtn);
   color: var(--blanco);
   border: none;
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.category:hover {
+  background: var(--blanco);
+  color: var(--colorBtn);
+  transition: all 0.5s;
 }
 
 .active {
@@ -297,7 +298,7 @@ main {
 }
 
 .product {
-  background: var(--backgrounDos);
+  background: var(--blanco);
   padding: 20px;
   gap: 20px;
   display: flex;
@@ -308,24 +309,30 @@ main {
 }
 
 .product h4 {
-  color: #555;
+  color: var(--text-dos);
   font-weight: normal;
 }
 
 .product p {
+  color: var(--text-dos);
   font-size: 15px;
 }
 
 .valoracion {
   /* #B197FC */
-  color: var(--text);
+  color: var(--text-dos);
   cursor: pointer;
 }
 
+.valoracion i:hover {
+  color: var(--blanco);
+  background-color: var(--colorBtn);
+}
+
 .btn-load {
-  background: var(--text);
-  border: 1px solid var(--blanco);
-  color: var(--bg-white);
+  background: var(--background);
+  border: none;
+  color: var(--blanco);
   padding: 10px 35px;
   cursor: pointer;
   border-radius: 10px;
@@ -333,26 +340,206 @@ main {
 }
 
 .btn-load:hover {
-  background: var(--negro);
+  background: var(--colorBtn);
+}
+
+/*************************************** Contacto ****************************************/
+
+:focus {
+  outline: none;
+}
+
+.form_wrap {
+  width: 995px;
+  height: 530px;
+  margin: 50px auto;
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact_info::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--colorBtn);
+  opacity: 0.9;
+}
+
+.contact_info {
+  width: 38%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_title,
+.info_items {
+  position: relative;
+  z-index: 1;
+}
+
+.info_title {
+  margin-bottom: 60px;
+}
+
+.info_title span {
+  font-size: 100px;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info_title h2 {
+  font-size: 20px;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.info_items p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--blanco);
+}
+
+.info_items p:nth-child(1) span {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.info_items p:nth-child(2) span {
+  font-size: 50px;
+  margin-right: 15px;
+  margin-left: 4px;
+}
+
+/********************************** Formulario de contacto ******************************/
+form.form_contact {
+  width: 60%;
+  padding: 30px 40px;
+}
+
+form.form_contact h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--negro);
+  margin-bottom: 30px;
+}
+
+form.form_contact .user_info {
+  display: flex;
+  flex-direction: column;
+}
+
+form.form_contact label {
+  font-weight: 600;
+  color: var(--text-dos);
+}
+
+form.form_contact input,
+form.form_contact textarea {
+  width: 100%;
+  padding: 8px 0px 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #d1d1d1;
+  color: var(--text-dos);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+form.form_contact textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 90px;
+}
+
+form.form_contact input[type="button"] {
+  width: 180px;
+  background: var(--background);
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  align-self: flex-end;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form.form_contact input[type="button"]:hover {
+  background: var(--colorBtn);
+  transition: all .5s;
 }
 
 /**************************************** Footer ********************************************/
-.footer {
-  color: var(--blanco);
-  padding: 1rem 0;
+footer {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: radial-gradient (#fff, #3a247c);
+  color: var(--negro);
+  padding: 20px 0;
+}
+
+footer h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: var(--text-dos);
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
   margin-top: 2rem;
 }
 
-.footer-texto {
-  cursor: pointer;
-  font-family: var(--text);
-  font-weight: 300;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.footer-texto a {
-  color: #000;
+.social-media a {
+  color: var(--text-dos);
 }
 
 /***************************** INPUTS ***********************************************/
@@ -360,104 +547,4 @@ main {
 #cart-toggle,
 .menu-label {
   display: none;
-}
-
-/* ------------------------------------------------------------- */
-/* ==================== MEDIAQUERIES =========================== */
-/* ------------------------------------------------------------- */
-@media (max-width: 992px) {
-
-  /* Header */
-  
-  .navbar-lista {
-    position: absolute;
-    top: 65px;
-    left: 5%;
-    right: 5%;
-    flex-direction: column;
-    width: 90%;
-    background: #555;
-    border: 2px solid var(--blanco);
-    border-top: 0;
-    border-radius: 0px 0px 15px 15px;
-    gap: 25px;
-    padding: 45px 0;
-    margin: 15px 0;
-    display: none;
-  }
-
-  .navbar-lista a {
-    color: var(--blanco);
-    font-size: 1.2rem;
-    font-weight: 200;
-  }
-
-  .menu-label {
-    display: flex;
-  }
-
-  #menu-toggle:checked + .navbar-lista {
-    display: flex;
-  }
-
-  .hero-info {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding-top: 70px;
-  }
-
-  .hero-info h1 {
-    margin-top: 6rem;
-    max-width: 500px;
-  }
-
-  .hero-info p {
-    font-size: 20px;
-    max-width: 600px;
-  }
-
-  .hero-cart {
-    display: none;
-  }
-
-  /* Info */
-  .info-container {
-    max-width: 90%;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-/* Celu */
-@media (max-width: 576px) {
-
-  /*Header */
-  .navbar {
-    gap: 0;
-  }
-
-  .logo {
-    width: 3rem;
-  }
-
-  .cart-icon {
-    width: 100%;
-  }
-
-  /* Hero */
-  .hero-info h1 {
-    font-size: 2rem;
-  }
-  .hero-info p {
-    font-size: 1rem;
-  }
-
-  /* Info */
-  .info-us h2 {
-    max-width: 80%;
-    text-align: center;
-  }
 }

@@ -7,7 +7,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="./assets/css/animations.css" />
-    
+    <link rel="stylesheet" href="./assets/css/mediaqueries.css">
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -54,7 +54,7 @@
             <a href="#tienda">Tienda</a>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <a href="#contacto">Contacto</a>
           </li>
         </ul>
         <div class="line"></div>
@@ -74,7 +74,7 @@
         </div>
         <div class="hero-cart">
           <img
-            src="/assets/img/icons/undraw_web_shopping_re_owap.svg"
+            src="/assets/img/icons/hero-cart.svg"
             alt="Portada del Hero"
           />
         </div>
@@ -148,7 +148,7 @@
           <button class="category btn">CSS</button>
           <button class="category btn">JS</button>
           <button class="category btn">React</button>
-          <button class="category btn">Back End</button>
+          <button class="category btn">GitHub</button>
         </div>
 
         <!-- productos -->
@@ -251,15 +251,87 @@
         </div>
         <button class="btn-load">Ver Más</button>
       </section>
+      
+      <!-- Formulario de Contacto -->
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <section class="form_wrap">
+          <section class="contact_info">
+            <section class="info_title">
+              <span class="fa fa-user-circle"></span>
+              <h2>Cualquier duda o consulta, contactanos!</h2>
+            </section>
+            <section class="info_items">
+              <p>
+                <span class="fa fa-envelope"></span> frontend.contact@gmail.com
+              </p>
+              <p><span class="fa fa-mobile"></span> +54 1123456789</p>
+            </section>
+          </section>
+  
+          <form action="" class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+              <label for="names">Nombre</label>
+              <input type="text" id="names" />
+  
+              <label for="phone">Telefono / Celular</label>
+              <input type="text" id="phone" />
+  
+              <label for="email">Correo electronico</label>
+              <input type="text" id="email" />
+  
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje"></textarea>
+  
+              <input type="button" value="Enviar Mensaje" id="btnSend" />
+            </div>
+          </form>
+        </section>
+      </section>
     </main>
-
-    <footer class="footer">
-      <p class="footer-texto">
-        Front End Store - Creado con 💖
-        <a href="https://github.com/NicolasJVera" target="_blank">
-          - Nicolas Vera -</a
-        >
-      </p>
-    </footer>
+    
+    <footer id="footer">
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4>Tienda</h4>
+              <ul>
+                  <li><a href="#">Acerca de</a></li>
+                  <li><a href="#">Equipo</a></li>
+                  <li><a href="#">Carreras</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Ayuda</h4>
+              <ul>
+                  <li><a href="#">Preguntas Frecuentes</a></li>
+                  <li><a href="#">Envíos</a></li>
+                  <li><a href="#">Devoluciones</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Contacto</h4>
+              <ul>
+                  <li><a href="#">Email: contacto@tienda.com</a></li>
+                  <li><a href="#">Teléfono: +123 456 789</a></li>
+                  <li><a href="#">Dirección: Calle Falsa 123</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Síguenos</h4>
+              <div class="social-media">
+                <a href="#">
+                  <i class="fa-brands fa-instagram fa-2xl"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-facebook fa-2xl"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-x-twitter fa-2xl"></i>
+                </a>
+              </div>
+          </div>
+      </div>
+  </footer>
   </body>
 </html>

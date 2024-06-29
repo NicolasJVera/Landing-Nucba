@@ -1,0 +1,166 @@
+:root {
+  --background: #b197fc;
+  --text: #55555583;
+  --text-dos: #2c3e50;
+  --negro: #02050e;
+  --blanco: #fff;
+  --colorBtn: #3a247c;
+  --max-width: 1200px;
+}
+
+/* ------------------------------------------------------------- */
+/* ==================== MEDIAQUERIES =========================== */
+/* ------------------------------------------------------------- */
+@media (max-width: 1035px) {
+  #contacto {
+    height: 100vh;
+    width: 90%;
+    margin-bottom: 10rem;
+  }
+
+  .form_wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+  }
+
+  .contact_info,
+  contact_info::before {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .info_title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info_title h2 {
+    font-size: 20px;
+  }
+
+  .info_title span {
+    width: 200px;
+  }
+
+  form.form_contact {
+    width: 100%;
+  }
+
+  .footer {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Header */
+  .navbar-lista {
+    position: absolute;
+    top: 65px;
+    left: 5%;
+    right: 5%;
+    flex-direction: column;
+    width: 90%;
+    background: radial-gradient(#fff, #b197fc);
+    border: 1px solid var(--blanco);
+    border-top: 0;
+    border-radius: 0px 0px 15px 15px;
+    gap: 25px;
+    padding: 45px 0;
+    margin: 15px 0;
+    display: none;
+  }
+
+  .navbar-lista a {
+    color: var(--negro);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .menu-label {
+    display: flex;
+  }
+
+  #menu-toggle:checked + .navbar-lista {
+    display: flex;
+  }
+
+  .hero-info {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 70px;
+  }
+
+  .hero-info h1 {
+    margin-top: 6rem;
+    max-width: 500px;
+  }
+
+  .hero-info p {
+    font-size: 20px;
+    max-width: 600px;
+  }
+
+  .hero-cart {
+    display: none;
+  }
+
+  /* Info */
+  .info-container {
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Celu */
+@media (max-width: 576px) {
+  /*Header */
+  .navbar {
+    gap: 0;
+  }
+
+  .logo {
+    width: 3rem;
+  }
+
+  .cart-icon {
+    width: 100%;
+  }
+
+  /* Hero */
+  .hero-info h1 {
+    font-size: 2rem;
+  }
+  .hero-info p {
+    font-size: 1rem;
+  }
+
+  /* Info */
+  .info-us h2 {
+    max-width: 80%;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+}
